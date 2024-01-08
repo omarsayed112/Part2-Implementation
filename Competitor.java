@@ -81,6 +81,14 @@ public abstract class Competitor {
     protected String getInitials() {
         return Arrays.stream(name.split(" ")).map(s -> s.substring(0, 1)).reduce("", String::concat);
     }
+
+    public void setScores(int[] newScores) {
+        if (newScores.length == 5) {
+            this.scores = newScores;
+        } else {
+            System.out.println("Error: The scores array must have exactly 5 elements.");
+        }
+    }
 }
 
 

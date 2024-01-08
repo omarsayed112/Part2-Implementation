@@ -124,6 +124,11 @@ public class CompetitorList {
         }
     }
 
+    public void removeCompetitor(Competitor competitor) {
+        competitors.remove(competitor);
+    }
+
+
 }
 
 
