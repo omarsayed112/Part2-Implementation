@@ -6,12 +6,21 @@ public abstract class Competitor {
     private String country;
     private int[] scores;
 
+    private String gender;
+
+    private String level;
+
+    private int age;
+
     // Constructor
-    public Competitor(int competitorNumber, String name, String country, int[] scores) {
+    public Competitor(int competitorNumber, String name, String country, int[] scores, String gender, String level, int age) {
         this.competitorNumber = competitorNumber;
         this.name = name;
         this.country = country;
         this.scores = scores;
+        this.gender = gender;
+        this.level = level;
+        this.age = age;
     }
 
     // Get and Set methods
@@ -55,9 +64,13 @@ public abstract class Competitor {
     // Method to get short details (to be implemented by subclasses)
     public abstract String getShortDetails();
     
-    public abstract String getLevel();
-    
-    public abstract int getAge();
+    public String getLevel(){
+        return level;
+    }
+
+    public int getAge(){
+        return age;
+    }
     
     // Method to get the array of scores
     public int[] getScoreArray() {

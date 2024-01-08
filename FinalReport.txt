@@ -1,3 +1,38 @@
 Competitor Details:
 CompetitorNum   Name                      Country         Level      Age   Scores                        
+100             Ann Sthen                 UK              Novice     23    [5, 2, 1, 9]                  
+101             George Beth Shon          UK              Intermediate 31    [2, 6, 5, 5]                  
+102             Kaith Andy Clos           UK              Advanced   29    [4, 7, 2, 2]                  
+103             Rinon Grov                US              Advanced   25    [1, 1, 5, 7]                  
+104             Mark Do Leno              UK              Novice     22    [5, 7, 4, 2]                  
+105             Harry Patrick             UK              Advanced   32    [2, 6, 5, 8]                  
+106             Vicy Mathew               UK                         33    [6, 2, 9, 5]                  
+107             Monica Loy                US                         29    [4, 4, 8, 2]                  
+108             Susan Mathew              US                         28    [5, 6, 5, 3]                  
+109             Andy Stov                 US                         22    [6, 2, 9, 6]                  
+110             Mary Francis              UK                         27    [7, 9, 6, 6]                  
+111             Jomon Vicy                UK                         22    [6, 9, 10, 9]                 
+112             Catherin George           UAE                        20    [1, 4, 4, 2]                  
+113             Aby Mathew                UK                         34    [2, 3, 6, 5]                  
+114             Jojo Mony                 UK                         31    [2, 3, 6, 7]                  
+115             Methen George             UK                         30    [4, 7, 7, 8]                  
+116             Scarlett John             UK                         25    [3, 4, 6, 5]                  
+117             Patrick Shanon            US                         22    [4, 9, 9, 10]                 
+118             Rod Stod                  UK                         26    [5, 9, 2, 4]                  
+119             Lijo Willams              UK                         28    [6, 2, 5, 8]                  
 
+Competitor with Highest Overall Score:
+Intermediate Competitor: Harry Patrick, Level: Advanced, Country: UK
+Summary Statistics:
+Average Overall Score: 5.85
+Frequency Report:
+Score 1: 4 times
+Score 2: 14 times
+Score 3: 4 times
+Score 4: 10 times
+Score 5: 13 times
+Score 6: 13 times
+Score 7: 7 times
+Score 8: 4 times
+Score 9: 9 times
+Score 10: 2 times

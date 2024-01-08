@@ -7,11 +7,9 @@ import java.util.Arrays;
 
 public class CompetitorList {
     private ArrayList<Competitor> competitors;
-
     public CompetitorList() {
         this.competitors = new ArrayList<>();
     }
-
     public void addCompetitor(Competitor competitor) {
         competitors.add(competitor);
     }
@@ -26,7 +24,7 @@ public class CompetitorList {
     }
 
     public ArrayList<Competitor> getAllCompetitors() {
-        return new ArrayList<>(competitors); // Return a copy to prevent modification outside the class
+        return new ArrayList<>(competitors);
     }
 
     public Competitor getHighestOverallScoreCompetitor() {
@@ -48,19 +46,15 @@ public class CompetitorList {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                // Assuming CSV format: competitorNumber,name,country,level,age,score1,score2,score3,score4,score5
                 String[] parts = line.split(",");
                 int competitorNumber = Integer.parseInt(parts[0]);
                 String name = parts[1];
-                String country = parts[4];
+                String country = parts[5];
                 String gender = parts[3];
+                String level = parts[4];
                 int age = Integer.parseInt(parts[2]);
-                int[] scores = new int[5];
-                for (int i = 0; i < 5; i++) {
-                    scores[i] = Integer.parseInt(parts[5 + i]);
-                }
-
-                Competitor competitor = new IntermediateCompetitor(competitorNumber, name, country, scores, level, age);
+                int[] scores = {Integer.parseInt(parts[6]),Integer.parseInt(parts[7]),Integer.parseInt(parts[8]),Integer.parseInt(parts[9])};
+                Competitor competitor = new IntermediateCompetitor(competitorNumber, name, country, scores, level, age, gender);
                 addCompetitor(competitor);
             }
         } catch (IOException | NumberFormatException e) {
@@ -108,12 +102,8 @@ public class CompetitorList {
             writer.write("Competitor with Highest Overall Score:\n");
             writer.write(highestScoreCompetitor.getFullDetails());
             writer.newLine();
-
-            // Summary statistics
             writer.write("Summary Statistics:\n");
             writer.write(String.format("Average Overall Score: %.2f\n", calculateAverageOverallScore()));
-
-            // Frequency report
             writer.write("Frequency Report:\n");
             HashMap<Integer, Integer> scoreFrequency = calculateScoreFrequency();
             for (int score : scoreFrequency.keySet()) {
@@ -124,16 +114,11 @@ public class CompetitorList {
         }
     }
 
+    //Method to read the file
     private static void testFileReading() {
         System.out.println("=== Testing Reading Competitors from a File ===");
-
-        // Create a CompetitorList
         CompetitorList competitorList = new CompetitorList();
-
-        // Read competitors from a CSV file
-        competitorList.readCompetitorsFromCSV("C:\\Users\\user\\OneDrive\\Desktop\\Software Architecture\\RunCompetitor.csv");
-
-        // Display details of all competitors
+        competitorList.readCompetitorsFromCSV("RunCompetitor.csv");
         for (Competitor competitor : competitorList.getAllCompetitors()) {
             System.out.println(competitor.getShortDetails());
         }

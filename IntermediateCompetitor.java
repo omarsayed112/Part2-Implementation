@@ -4,16 +4,14 @@ public class IntermediateCompetitor extends Competitor {
     private int age;
 
     // Constructor
-    public IntermediateCompetitor(int competitorNumber, String name, String country, int[] scores, String level, int age) {
-        super(competitorNumber, name, country, scores);
+    public IntermediateCompetitor(int competitorNumber, String name, String country, int[] scores, String level, int age, String gender) {
+        super(competitorNumber, name, country, scores, gender, level, age);
         this.level = level;
         this.age = age;
     }
 
     @Override
     public double getOverallScore() {
-        // Implement the specific way to calculate overall score for IntermediateCompetitor
-        // For example, you can calculate the average score with a weight for the level
         double averageScore = Arrays.stream(getScoreArray()).average().orElse(0);
         double weightedScore = averageScore * getLevelWeight();
         return weightedScore;
@@ -28,7 +26,6 @@ public class IntermediateCompetitor extends Competitor {
 
     @Override
     public String getShortDetails() {
-        // Implement how short details are represented for IntermediateCompetitor
         return String.format("ICN %d (%s) has an overall score of %.2f.", getCompetitorNumber(), getInitials(), getOverallScore());
     }
     
@@ -44,8 +41,6 @@ public class IntermediateCompetitor extends Competitor {
 
     // Helper method to get the weight based on the level
     private double getLevelWeight() {
-        // Implement the logic to determine the weight based on the level
-        // This is just an example, you may adjust it based on your requirements
         switch (level.toLowerCase()) {
             case "beginner":
                 return 1.0;
