@@ -1,0 +1,3 @@
+Competitor Details:
+CompetitorNum   Name                      Country         Level      Age   Scores                        
+

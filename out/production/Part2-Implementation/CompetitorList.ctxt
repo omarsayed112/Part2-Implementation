@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=CompetitorList
+comment1.params=
+comment1.target=CompetitorList()
+comment10.params=
+comment10.target=void\ generateFinalReport()
+comment2.params=competitor
+comment2.target=void\ addCompetitor(Competitor)
+comment3.params=competitorNumber
+comment3.target=Competitor\ getCompetitor(int)
+comment4.params=
+comment4.target=java.util.ArrayList\ getAllCompetitors()
+comment5.params=
+comment5.target=Competitor\ getHighestOverallScoreCompetitor()
+comment6.params=competitorNumber
+comment6.target=void\ printShortDetails(int)
+comment7.params=filePath
+comment7.target=void\ readCompetitorsFromCSV(java.lang.String)
+comment8.params=
+comment8.target=java.util.HashMap\ calculateScoreFrequency()
+comment9.params=
+comment9.target=double\ calculateAverageOverallScore()
+numComments=11
